@@ -9,7 +9,7 @@ import java.time.LocalDate;
  *
  * 
  */
-@Getter @Setter @ToString 
+@Getter @Setter @ToString @RequiredArgsConstructor 
 @Entity
 public class Transaction {
     
@@ -23,7 +23,7 @@ public class Transaction {
     @ManyToOne
     private Exposition lieuDeVente;
     
-    @OneToOne( mappedBy="Transaction")
+    @OneToOne
     private Tableau oeuvre;
     
     @ManyToOne

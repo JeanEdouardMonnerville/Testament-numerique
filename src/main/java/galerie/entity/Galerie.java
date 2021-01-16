@@ -9,10 +9,13 @@ import java.util.LinkedList;
 // cf. https://examples.javacodegeeks.com/spring-boot-with-lombok/
 @Getter @Setter @NoArgsConstructor @RequiredArgsConstructor @ToString
 @Entity // Une entité JPA
+
 public class Galerie {
     @Id  @GeneratedValue(strategy = GenerationType.IDENTITY) 
     private Integer id;
-
+    
+    
+    
     @Column(unique=true)
     @NonNull
     private String nom;
@@ -21,6 +24,23 @@ public class Galerie {
     @NonNull
     private String adresse;
     
-    @OneToMany( mappedBy="Galerie")
+    @OneToMany( mappedBy="organisateur")
     private List<Exposition> evenements=new LinkedList <>() ;
+    
+        /*@Param annee correspond à l'annee du CA demandé
+         *@Return Le Chiffre d'Affaire annuel de cette annee là
+        */
+        public float CAannuel(int annee){
+        float result=0f;
+    
+        for(Exposition e:evenements){
+            int anneExpo =e.getDateExpo().getYear();
+            if( anneExpo == annee ){
+                result= result+ e.CA();
+                
+            }
+        }
+        return result;
+    }
+
 }

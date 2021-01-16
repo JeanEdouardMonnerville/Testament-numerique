@@ -31,10 +31,25 @@ public class Exposition {
     @ManyToOne
     private Galerie organisateur;
     
-    @ManyToMany( mappedBy="Exposition" )
-    @NonNull
+    @ToString.Exclude
+    @ManyToMany( mappedBy="accrochages" )
     private List<Tableau> oeuvres = new LinkedList<>();
     
-    @OneToMany(mappedBy="Exposition")
+    @ToString.Exclude
+    @OneToMany(mappedBy="lieuDeVente")
     private List<Transaction> ventes=new LinkedList<>();
+    
+        public float CA(){
+        float result=0f;
+        for(Transaction t:ventes){
+            result= result+ t.getPrixVente();
+        
+        }
+        
+        return result;
+        }
+    
+        
+    
 }
+   

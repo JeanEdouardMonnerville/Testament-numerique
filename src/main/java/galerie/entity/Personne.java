@@ -10,9 +10,19 @@ import java.util.List;
  *
  * @author Jean-Edouard
  */
-@Getter @Setter @ToString @NoArgsConstructor @RequiredArgsConstructor
+@Getter @Setter @ToString @NoArgsConstructor 
 @Entity
+@Inheritance(strategy=InheritanceType.SINGLE_TABLE)
 public class Personne {
+
+    public Personne(String nom, String adresse) {
+        this.nom = nom;
+        this.adresse = adresse;
+        this.achats=new LinkedList<>();
+    }
+    
+    
+    
     @Id  @GeneratedValue(strategy = GenerationType.IDENTITY) 
     private Integer id;
     
@@ -23,7 +33,23 @@ public class Personne {
     @Column
     private String adresse;
     
-    @OneToMany( cascade=CascadeType.ALL)
-    private List<Transaction> achats=new LinkedList<>();
+    @OneToMany( mappedBy="client",cascade=CascadeType.ALL)
+    private List<Transaction> achats;
+    
+         
+    public float budgetArt(int annee){
+        float result=0f;
+        
+        for(Transaction t: achats){
+            int anneTransac =t.getVenduLe().getYear();
+            
+            if( anneTransac == annee ){
+                result= result+ t.getPrixVente();
+                
+            }
+        }
+        return result;
+    }
+    
     
 }
