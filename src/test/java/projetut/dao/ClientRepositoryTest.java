@@ -28,9 +28,6 @@ public class ClientRepositoryTest {
     @Test
     @Sql("test-data.sql") // On peut charger des donnnées spécifiques pour un test
     public void onSaitCompterLesEnregistrements() {
-        log.info("On compte les enregistrements de la table 'client'");
-        int combienDansLeJeuDeTest = 1; 
-        long nombre = clientDao.count();
-        assertEquals(combienDansLeJeuDeTest, nombre, "On doit trouver 1 client" );
+        
     }
 }
