@@ -1,127 +1,27 @@
+@font-face{font-family:"Special Elite"; src:url('../police/special-elite/SpecialElite.ttf')}
+@font-face{font-family: "didact gothic"; src:url('../police/didact-gothic/DidactGothic.ttf')}
+
 body{
-	font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;	
+    font-family:"didact gothic";
 }
 
-td, th {
-	border: 1px solid #ddd;
-	padding: 8px;
+h1{
+    font-family: Special Elite;
+    text-align:center;
 }
 
-tr:nth-child(even){background-color: #f2f2f2;}
-
-tr:hover {background-color: #ddd;}
-
-th {
-	padding-top: 12px;
-	padding-bottom: 12px;
-	text-align: left;
-	background-color: #4CAF50;
-	color: white;
+nav a{
+    list-style: none;
+    text-decoration: none;  
+    color: black;
 }
 
-.column{
-	width:50%;
-	float:left;
-	padding: 5px;
-	box-sizing:border-box;
+.join{
+    text-transform: uppercase;
+    text-decoration:none;
+    background-color: #cb6ce6;
+    padding: 0;
+    border-radius: 10px;
+    border-bottom: 5px solid white;
 }
 
-/*clear-fix the parent of column because it collapsed!  */
-form:after{
-	content:'';
-	display:block;
-	clear:both;
-}
-
-/* FORM STUFF BEGINS HERE */
-form{
-	font-size:110%
-}
-
-label{
-	display:block;
-	color:saddlebrown;
-	margin: 5px 0 3px;
-}
-
-fieldset label{
-	display:inline-block;
-	font-size:85%;
-	font-family: Calibri, sans-serif;
-}
-
-
-input[type=text],
-input[type=email],
-input[type=tel],
-textarea,
-select{
-	width:100%;
-	padding:10px;
-	box-sizing:border-box;
-	background-color: #f2f2f2;	
-	border: solid 1px tan;
-}
-
-textarea{
-	resize: vertical;
-	min-height: 70px;
-}
-
-fieldset{
-	border:none;
-	margin:20px 0 ;
-	padding:10px 0;
-	border-bottom: 1px solid tan;
-}
-
-legend{
-	color:white;
-	background-color:tan;
-	display:block;
-	width:100%;
-	padding:3px;
-}
-
-input[type=checkbox]{
-	background-color:red;
-	border: solid 1px red;
-	color:red;
-	outline:red;
-}
-
-/* BUTTONS */
-input[type=submit]{
-	padding-top:12px;
-	padding-bottom:12px;
-	padding-left:12px; 
-	padding-right:12px;
-	border-radius:10px;
-	text-align:left;
-	background-color: #4CAF50;
-	color: white;
-	border:none;
-}
-/* Reset Button: minimize the appearance */
-input[type=reset]{
-	background-color:transparent;
-	border:none;
-	text-decoration:underline;
-	cursor:pointer;
-	margin:20px 0;
-	color:olive;
-}
-
-/* hovers and tabs */
-input[type=text]:hover,
-input[type=email]:hover{
-	background-color:khaki;
-}
-input[type=text]:focus,
-input[type=email]:focus{
-	outline: 2px solid tan;
-}
-input[type=sumbit]:hover,
-input[type=submit]:focus{
-	background-color:limegreen;
-}
