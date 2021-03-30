@@ -8,7 +8,7 @@ par le client.
 import javax.persistence.*;
 import lombok.*;
 
-@Getter @Setter @ToString
+@Getter @Setter @ToString @NoArgsConstructor
 @Entity 
 public class Personne {
     @Id  @GeneratedValue(strategy = GenerationType.IDENTITY) 

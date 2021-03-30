@@ -10,13 +10,21 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import java.util.List;
+import javax.persistence.Column;
+import javax.persistence.Inheritance;
+import javax.persistence.InheritanceType;
+import javax.persistence.JoinTable;
 import javax.persistence.ManyToMany;
 import javax.persistence.ManyToOne;
-import javax.persistence.OneToMany;
+import lombok.NoArgsConstructor;
 
-@Getter @Setter  @ToString
+
+@Inheritance(strategy = InheritanceType.SINGLE_TABLE)
+@Getter @Setter  @ToString @NoArgsConstructor
 @Entity 
 public class Client extends Personne {
+
+   
 
     public Client(LocalDate dateNaiss, String adresse, String mdp, boolean prive, String nom, String prenom, String mail, String tel) {
         super(nom, prenom, mail, tel);
@@ -24,28 +32,33 @@ public class Client extends Personne {
         this.adresse = adresse;
         this.mdp = mdp;
         this.prive = prive;
-        
+        this.dead=false;
     }
     
     @Id  @GeneratedValue(strategy = GenerationType.IDENTITY) 
     private Integer id;
    
+    @Column(name="date_naiss")
     private LocalDate dateNaiss;
     
+    @Column(name="adresse")
     private String adresse;
     
+    @Column(name="mdp")
     private String mdp;
     
+    @Column(name="prive")
     private boolean prive;
     
-    private boolean dead=false;
+    @Column(name="dead")
+    private boolean dead;
     
-    @ManyToMany(mappedBy="clients")
+    @ManyToMany
+    @JoinTable(name="Autorisation_Consultation")
     private List<Personne> persAutorisees;
    
     @ManyToOne
     private Angel myAngel;
     
-    @OneToMany(mappedBy="proprietaire")
-    private List<Donnee> patrimoine;
+  
 }
