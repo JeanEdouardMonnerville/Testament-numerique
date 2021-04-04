@@ -7,6 +7,7 @@ par le client.
 */
 import javax.persistence.*;
 import lombok.*;
+import org.springframework.lang.Nullable;
 
 @Getter @Setter @ToString @NoArgsConstructor
 @Entity 
@@ -14,21 +15,6 @@ public class Personne {
     @Id  @GeneratedValue(strategy = GenerationType.IDENTITY) 
     private Integer id;
     
-    private String nom;
-    
-    private String prenom;
-    
-    private String mail;
-    
-    private String tel;
-
-    public Personne(String nom, String prenom, String mail, String tel) {
-        this.nom = nom;
-        this.prenom = prenom;
-        this.mail = mail;
-        this.tel = tel;
-    }
-    
-    
-    
+    //@OneToOne@Nullable
+    //private Compte comptePrincipal;
 }
