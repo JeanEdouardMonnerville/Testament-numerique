@@ -7,7 +7,6 @@ body{
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
-
     text-align: center;
     font-weight: bolder;
 }
@@ -33,7 +32,6 @@ nav a{
 }
 
 /*CSS spécifique à la page ange*/
-
 table{
     border: 1px solid black;    
 }
@@ -66,10 +64,10 @@ caption{
 #MadeWith{
     margin-top: 20em;
 }
-
 /*CSS Spécifique à la page d'erreur*/
 
 #Smileypascontent{
     width: 50px;
     height: 50px;
 }
+
