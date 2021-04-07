@@ -32,6 +32,34 @@ nav a{
     border-bottom: 5px solid white;
 }
 
+#MadeWith{
+    margin-top: 20em;
+}
+
+
+/*CSS Index*/
+
+.logo {
+    width: 50px;
+    height: 50px;
+}
+
+.coeur {
+    width: 30px;
+    height: 30px;
+}
+
+.boutton {
+    border-radius: 50px;
+    background-color: violet;
+    cursor: pointer;
+    color: white;
+}
+
+.boutton:hover{
+    background-color: #ae10da;
+}
+
 /*CSS spécifique à la page ange*/
 
 table{
@@ -63,13 +91,18 @@ caption{
     background-color: #ae10da;}
 
 
-#MadeWith{
-    margin-top: 20em;
-}
 
 /*CSS Spécifique à la page d'erreur*/
 
 #Smileypascontent{
     width: 50px;
     height: 50px;
+}
+
+/*CSS page Client */
+
+.logo2 {
+    width: 100px;
+    height: 100px;
+    object-position: 50% 50%;
 }
