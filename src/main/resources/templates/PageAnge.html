@@ -1,29 +1,35 @@
 <!DOCTYPE html>
-<html>
+<html lang=fr>
     <head>
-        <title> Page d'accueil visiteur</title>
+        <title>L'ange des souvenirs numériques</title>
         <meta charset="UTF-8"/>
-        <link rel="stylesheet" href="style.css">
-	    <meta name="testament" content="testament,numérique,souvenirs,patrimoine"/> 
+        <link rel="stylesheet" href="../static/css/style.css">
+	    <meta name="testament" content="testament,numérique,souvenirs,patrimoine,ange,connecté"/> 
     </head>
+    <h1>Bienvenue dans les souvenirs numériques</h1>
+    <div id="description">
+    <p>Si l'un de nos client vous a choisie comme étant son ange, il apparaitra ci-dessous.</p>
+    <p>Vous avez la responsabilité de nous avertir de sa mort.Ne vous trompez pas!</p>
+    </div>
     <body>
-    <h1 id="titre">Les Souvenirs Numériques</h1>
-    <section>
-        <p>"Commémorer vos proches avec des <br> souvenirs créés par eux"</p>
-    </section>
-    <nav id="nav1">
+        <TABLE BORDER="1"id="tableauDeLange" cellpadding= > 
+            <CAPTION> Qui nous a quitté? </CAPTION> 
+            <TR> 
+            <TH>N°</TH>
+           <TH> Nom-Prénom </TH> 
+           <TH> Mort? </TH> 
+            </TR> 
 
-               <p> <a href="inscription" class="join">Entrer un compte</a></p>
-
-    </nav>
-    <nav id="nav2">
-                <a href="A propos">A propos</a>
-                <a href="L'équipe">L'équipe</a>
-                <a href="Nos valeurs">Nos valeurs</a>
-                <a href="Notre mission">Notre mission</a>
-                <a href="Nous contacter">Nous contacter</a>
-    </nav>
-    <p>Made with></p>
+            <TR id="lesClientsAnge"> 
+           <TH> 1 </TH> 
+           <TD> Dupont Paul </TD> 
+           <TD> <input type="checkbox" name="Dead" id="isDead"> </TD> 
+            </TR> 
+          </TABLE>
+          <form action="Put">
+              <input type="submit" value="Enregistrer" id="ValideTableauAnge">
+          </form>
+    <p id="MadeWith">Made with</p>
 </body>
 </html>
 

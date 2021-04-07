@@ -3,6 +3,13 @@
 
 body{
     font-family:"didact gothic";
+    background-image: url("images/fond1.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+
+    text-align: center;
+    font-weight: bolder;
 }
 
 h1{
@@ -23,5 +30,37 @@ nav a{
     padding: 0;
     border-radius: 10px;
     border-bottom: 5px solid white;
+}
+table{
+    border: 1px solid black;    
+}
+#tableauDeLange{
+    margin-left: 35em;
+    margin-top: 3em;
+    position: relative;
+    text-align: center ;
+}
+
+caption{
+    background-color: #cb6ce6;
+    background: solid;
+    color: white;
+}
+
+#ValideTableauAnge{
+    margin-top: 2em;
+    background-color: #cb6ce6;
+    color: white;
+    cursor: pointer;
+    
+}
+
+#ValideTableauAnge:hover{
+ 
+    background-color: #ae10da;}
+    
+
+#MadeWith{
+    margin-top: 20em;
 }
 
