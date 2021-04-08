@@ -12,10 +12,7 @@ const url1="http://localhost:8080/Identitfication";
 const urlOauthLinkedIN1=
 "https://www.linkedin.com/oauth/v2/authorization?response_type=code&state=31415926&scope="+scope+"&client_id="+clientId+"&redirect_uri="+url1;
 
-
-
 LinkedIN=document.getElementById("LinkedInLogin");
-
 function authentificationLinkedIN(){
    htmlref=urlOauthLinkedIN1;
    LinkedIN.href=htmlref;
