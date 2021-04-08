@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 @Controller
 public class AngeController {
     
-    @GetMapping(path="/Identification/PageAnge")
+    @GetMapping(path="/PageAnge")
     public String redirectIdentificationPageAnge(){
         return "PageAnge";
     }

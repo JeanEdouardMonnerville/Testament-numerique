@@ -28,7 +28,7 @@ public class ClientController {
         return "Identification";
     }
     
-    @GetMapping("/Identification/PageClient")
+    @GetMapping("/PageClient")
     public String redirectIdentificationPageClient(){
         return "PageClient";
     }
