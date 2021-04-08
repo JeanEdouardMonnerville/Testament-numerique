@@ -21,8 +21,19 @@ import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 
 @Controller
-@RequestMapping
 public class ClientController {
+    
+    @GetMapping("/Identitfication")
+    public String redirectPageIdentity(){
+        return "Identification";
+    }
+    
+    @GetMapping("/Identification/PageClient")
+    public String redirectIdentificationPageClient(){
+        return "PageClient";
+    }
+   
+    
 
     
 }
