@@ -32,7 +32,7 @@ public class CompteInstagram extends Compte {
     
     private String pseudo;
     
-    @OneToMany
+    @OneToMany(mappedBy="compte")
     private List<ActionInstagram> actionInstagrams;
 
     @Override
