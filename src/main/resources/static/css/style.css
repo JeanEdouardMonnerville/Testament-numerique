@@ -24,14 +24,6 @@ nav a{
     color: black;
 }
 
-.join{
-    text-transform: uppercase;
-    text-decoration:none;
-    background-color: #cb6ce6;
-    padding: 0;
-    border-radius: 10px;
-    border-bottom: 5px solid white;
-}
 
 #MadeWith{
     margin-top: 20em;
@@ -133,3 +125,39 @@ caption{
     object-position: 50% 50%;
 }
 
+/*CSS Identification */
+
+.join{
+    text-transform: uppercase;
+    text-decoration:none;
+    background-color: #cb6ce6;
+    padding: 0;
+    border-radius: 10px;
+    border-bottom: 5px solid white;
+    padding : 1em;
+    margin-left: 0.5em;
+    margin-right: 0.5em;
+    border-color: #cb6ce6;
+    border-style: outset
+}
+.join:hover{
+    text-transform: uppercase;
+    text-decoration:none;
+    background-color: #cb6ce6;
+    padding: 0;
+    border-radius: 10px;
+    border-bottom: 5px solid white;
+    padding : 1em;
+    margin-left: 0.5em;
+    margin-right: 0.5em;
+    border-color: #cb6ce6;
+    border-style: outset;
+    background-color: #ae10da;
+    color: white;
+}
+ 
+#nav1{
+    position: relative;
+    margin-top: 8em;
+    text-align: center;
+}
