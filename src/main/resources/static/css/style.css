@@ -42,6 +42,8 @@ nav a{
     position: relative;
     top:15px;
     padding-right:3px;
+    margin-left: 10px;
+    margin-right: 3px;
 }
 
 .coeur {
@@ -75,6 +77,11 @@ footer{
     width:100%;  
     padding-top:50px;  
     height:50px;
+    }
+
+footer a {
+color: black;
+text-decoration: none;
     }
 
 /*CSS spécifique à la page ange*/
@@ -167,6 +174,6 @@ caption{
  
 #nav1{
     position: relative;
-    margin-top: 7em;
+    margin-top: 3.5em;
     text-align: center;
 }
