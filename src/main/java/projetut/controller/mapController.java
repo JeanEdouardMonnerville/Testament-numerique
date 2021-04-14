@@ -26,4 +26,18 @@ public class mapController {
         return "PageAnge";
     }
     
+    @GetMapping(path="/erreur")
+    public String redirecterror(){
+        return "PageDerreur";
+    }
+    @GetMapping(path="/aproposde")
+    public String redirectaproposde(){
+        return "Apropos";
+    }
+    
+    @GetMapping(path="/CallBack")
+    public String redirectCallBack(){
+        return "CallBack";
+    }
+    
 }
