@@ -14,6 +14,7 @@ import javax.persistence.InheritanceType;
 import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
 import java.util.List;
+import javax.validation.constraints.NotNull;
 
 @Inheritance(strategy = InheritanceType.SINGLE_TABLE)
 @Getter @Setter  @ToString 
@@ -32,11 +33,14 @@ public class Client extends Personne {
     @Column(name="dead")
     private boolean dead;
     
+    @NotNull
+    private String nom;
     
+    @NotNull
+    private String prenom;
+   
     @ManyToOne
     private Personne myAngel;
     
-    @OneToMany
-    private List<Compte> comptes;
    
 }

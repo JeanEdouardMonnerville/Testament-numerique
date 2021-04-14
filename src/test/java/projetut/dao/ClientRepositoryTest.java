@@ -28,9 +28,9 @@ public class ClientRepositoryTest {
     @Test
     @Sql("test-data.sql")
     public void onSaitCompterLeNombreDeClient() {
-        int combirenDansLeJeuDeTest=1;
+        int combirenDansLeJeuDeTest=2;
         long nombre= clientDao.count();
-        assertEquals(combirenDansLeJeuDeTest,nombre,"On doit trouver 1 client");
+        assertEquals(combirenDansLeJeuDeTest,nombre,"On doit trouver 2 client");
     }
     
     @Test

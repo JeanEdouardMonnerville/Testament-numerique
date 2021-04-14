@@ -25,7 +25,7 @@ public class CompteLinkedIN extends Compte{
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
 
-   @OneToMany
+   @OneToMany(mappedBy="compte")
    private List<ActionLinkedIN> actionLinkedINs;
 
     @Override

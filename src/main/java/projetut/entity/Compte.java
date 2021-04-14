@@ -22,31 +22,25 @@ import org.springframework.lang.Nullable;
 @Entity
 public class Compte{
 
-  
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
     
     @Column(name="token")
-    private String token;
+    private String Accesstoken;
     
     @Column(name="Adresse_mail")
     private String adresseMail;
     
-    //@OneToOne@Nullable
-    //private Personne mainProprietaire;
-    
-    @ManyToOne@Nullable
-    private Client proprietaire;          
-    
-    @OneToMany@Nullable
+    @OneToMany(mappedBy="compte")@Nullable
     private List<ActionGenerique> actionGeneriques; 
     
-    @OneToMany@Nullable
+    @OneToMany(mappedBy="compte")@Nullable
     private List<ActionGenerale> actionGenerales;
     
+    @ManyToOne
+    private Personne proprietaire;
     
-
     @Override
     public int hashCode() {
         int hash = 0;
