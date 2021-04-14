@@ -16,11 +16,6 @@ public class mapController {
         return "Identification";
     }
     
-    @GetMapping("/PageClient")
-    public String redirectIdentificationPageClient(){
-        return "PageClient";
-    }
-    
        @GetMapping(path="/PageAnge")
     public String redirectIdentificationPageAnge(){
         return "PageAnge";

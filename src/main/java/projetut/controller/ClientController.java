@@ -18,9 +18,19 @@ import projetut.entity.Client;
 import org.springframework.dao.DataIntegrityViolationException;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
+import projetut.dao.PersonneRepository;
 
 
 @Controller
 public class ClientController {
- 
+    
+    @Autowired
+    private ClientRepository ClientDao;
+    
+    @GetMapping("/PageClient")
+    public String redirectIdentificationPageClient(Model model){
+        model.addAttribute("clients", ClientDao.findAll());
+        return "PageClient";
+    }
+
 }

@@ -22,16 +22,12 @@
       </nav>
     </table>
     <h2>Qui sera votre ange gardien ?</h2>
-    
-    <p><label for="Ange"><img src="css/images/ange.png" class="logo">Choisissez votre ange</label>
-
-    <select name="ange" id="ange">
-        <option value="">--Votre Ange gardien--</option>
-        <option value="a1">ange 1</option>
-        <option value="a2">ange 2</option>
-        <option value="a3">ange 3</option></p>
+    <label for="Ange"><img src="css/images/ange.png" class="logo">Choisissez votre ange</label>
+    <select name="ange" id="ange" th:each="c:${clients}">
+        <option value="">Votre Ange</option>
+        <option th:text="${c.prenom} ${c.nom}">ange 1</option>
     <footer>
-      <a href="A propos">À propos | Made with <img src = "css/images/coeur.png" alt = "love" class="coeur"></a>
+      <a href="/aproposde">À propos | Made with <img src = "css/images/coeur.png" alt = "love" class="coeur"></a>
   </footer>
   </body>
 </html>
