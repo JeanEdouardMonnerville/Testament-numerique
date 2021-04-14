@@ -20,7 +20,8 @@ h1{
 
 h2{
     position: relative;
-    margin-top: 3em;
+    margin-top: 0.8em;
+
 }
 nav a{
     list-style: none;
@@ -129,6 +130,11 @@ caption{
 
 /*CSS page Client */
 
+#logoRS{
+    position: relative;
+    margin-top: 2px;
+    text-align: center;
+}
 .logo2 {
     width: 100px;
     height: 100px;
@@ -136,7 +142,12 @@ caption{
 }
 #nav2{
     position: relative;
-    margin-top: 3em;
+    margin-top: 2em;
+    text-align: center;
+}
+#nav3 {
+    position: relative;
+    margin-top: 2em;
     text-align: center;
 }
 

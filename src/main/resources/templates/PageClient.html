@@ -2,7 +2,7 @@
 <html>
     <head>
         <meta charset="UTF-8"/>
-        <link rel="stylesheet" href="../static/css/style.css">
+        <link rel="stylesheet" href="css/style.css">
 	    <title> Page d'accueil client</title>
 	    <meta name="testament" content="testament,numérique,souvenirs,patrimoine"/> 
     </head>
@@ -10,19 +10,28 @@
     <h1>Mes Souvenirs Numériques</h1>
     <h2>Choisissez votre réseau social : </h2>
 
+    <nav id="nav2">
+      <img src="css/images/logo Insta.png" class="logo2">
+      <img src="css/images/LinkedIn_logo_initials.png" class="logo2">
+    </nav>
     <table>
       <nav id="nav2">
         <tr><input type="button" value="Sélectionner des Souvenirs" class="join"></tr>
         <tr><input type="button" value="Programmer un message" class="join"></tr>
         <tr><input type="button" value="Supprimer un compte" class="join"></tr>
       </nav>
-        <tr>
-            <td><img src="../static/css/images/logo Insta.png" class="logo2"></td>
-            <td><img src="../static/css/images/LinkedIn_logo_initials.png" class="logo2"></td>
-        </tr>
     </table>
+    <h2>Qui sera votre ange gardien ?</h2>
+    
+    <p><label for="Ange"><img src="css/images/ange.png" class="logo">Choisissez votre ange</label>
+
+    <select name="ange" id="ange">
+        <option value="">--Votre Ange gardien--</option>
+        <option value="a1">ange 1</option>
+        <option value="a2">ange 2</option>
+        <option value="a3">ange 3</option></p>
     <footer>
-      <a href="A propos">À propos | Made with <img src = "../static/css/images/coeur.png" alt = "love" class="coeur"></a>
+      <a href="A propos">À propos | Made with <img src = "css/images/coeur.png" alt = "love" class="coeur"></a>
   </footer>
   </body>
 </html>
