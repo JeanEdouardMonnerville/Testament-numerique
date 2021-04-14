@@ -18,6 +18,10 @@ h1{
     text-align:center;
 }
 
+h2{
+    position: relative;
+    margin-top: 3em;
+}
 nav a{
     list-style: none;
     text-decoration: none;  
@@ -46,7 +50,6 @@ nav a{
 }
 
 .boutton {
-    text-decoration: underline;
     font-size:0.8em;
     border-radius:0px;
     background-color: white;
@@ -124,6 +127,12 @@ caption{
     height: 100px;
     object-position: 50% 50%;
 }
+#nav2{
+    position: relative;
+    margin-top: 3em;
+    text-align: center;
+}
+
 
 /*CSS Identification */
 
@@ -158,6 +167,6 @@ caption{
  
 #nav1{
     position: relative;
-    margin-top: 8em;
+    margin-top: 7em;
     text-align: center;
 }
