@@ -2,7 +2,8 @@
 <html>
     <head>
         <meta charset="UTF-8"/>
-        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" th:href="@{/css/style.css}" href="../static/css/style.css">
+        <link rel="shortcut icon" type="image/png" th:href="@{/css/images/logoSouvenirNumerique.png}" href="../static/css/images/logoSouvenirNumerique.png"/>
 	    <title> Page d'accueil client</title>
 	    <meta name="testament" content="testament,numérique,souvenirs,patrimoine"/> 
     </head>
@@ -11,8 +12,8 @@
     <h2>Choisissez votre réseau social : </h2>
 
     <nav id="nav2">
-      <img src="css/images/logo Insta.png" class="logo2">
-      <img src="css/images/LinkedIn_logo_initials.png" class="logo2">
+      <img th:src="@{css/images/logo Insta.png}" src="../static/css/images/logo Insta.png" class="logo2">
+      <img th:src="@{css/images/LinkedIn_logo_initials.png}" src="../static/css/images/LinkedIn_logo_initials.png" class="logo2">
     </nav>
     <table>
       <nav id="nav2">
@@ -22,12 +23,12 @@
       </nav>
     </table>
     <h2>Qui sera votre ange gardien ?</h2>
-    <label for="Ange"><img src="css/images/ange.png" class="logo">Choisissez votre ange</label>
+    <label for="Ange"><img th:src="@{css/images/ange.png}" src="../static/css/images/ange.png" class="logo">Choisissez votre ange</label>
     <select name="ange" id="ange" th:each="c:${clients}">
         <option value="">Votre Ange</option>
         <option th:text="${c.prenom} ${c.nom}">ange 1</option>
     <footer>
-      <a href="/aproposde">À propos | Made with <img src = "css/images/coeur.png" alt = "love" class="coeur"></a>
+      <a th:href="@{/aproposde}" href="Apropos.html">À propos | Made with <img th:src = "@{css/images/coeur.png}" src="../static/css/images/coeur.png" alt = "love" class="coeur"></a>
   </footer>
   </body>
 </html>

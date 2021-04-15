@@ -3,17 +3,18 @@
     <head>
         <title> Souvenirs numériques</title>
         <meta charset="UTF-8"/>
-        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" th:href="@{/css/style.css}" href="../static/css/style.css">
+        <link rel="shortcut icon" type="image/png" th:href="@{/css/images/logoSouvenirNumerique.png}" href="../static/css/images/logoSouvenirNumerique.png"/>
 	    <meta name="testament" content="Error,testament,numérique,souvenirs,patrimoine"/> 
     </head>
     <body>
       <H1>Bienvenue dans Les Souvenirs Numériques</H1>
-      <img id="Smileypascontent" src="css/images/error.svg.png" alt="Error">
+      <img id="Smileypascontent" th:src="@{css/images/error.svg.png}" src="../static/css/images/error.svg.png" alt="Error">
       <div>
       <p id="TextError">Une erreur c'est produite,veuillez retourner à la page d'accueil</p>
-      <a href="/">Page d'acceuil</a>
+      <a th:href="@{/}" href="../static/index.html">Page d'acceuil</a>
       <footer>
-        <a href="/aproposde">À propos | Made with <img src = "css/images/coeur.png" alt = "love" class="coeur"></a>
+        <a th:href="@{/aproposde}" href="Apropos.html">À propos | Made with <img th:src = "@{css/images/coeur.png}" src="../static/css/images/coeur.png" alt = "love" class="coeur"></a>
     </footer>
     </div>
     </body>
