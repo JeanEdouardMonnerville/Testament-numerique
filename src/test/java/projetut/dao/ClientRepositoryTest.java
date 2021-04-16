@@ -49,16 +49,6 @@ public class ClientRepositoryTest {
          assertEquals(myAngel,c1.get().getMyAngel(),"L'ange a mal été désigné");
      }
     
-     @Test
-     @Sql("test-data.sql")
-     public void testSuppressionDunClient(){
-         long NombreInitial=clientDao.count();
-         
-         clientDao.deleteById(1);
-         
-         assertEquals(NombreInitial-1,clientDao.count(),"Le client n'a pas été supprimé correctement");
-   
-     }
     
     }
 

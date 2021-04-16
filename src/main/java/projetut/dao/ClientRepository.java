@@ -18,13 +18,5 @@ public interface ClientRepository extends JpaRepository<Client, Integer> {
     void designeLange(Integer client_id,Integer angel_id);
     
     
-     /**
-     * Supprime un client de la base. Utile quand le client va être déclaré pour mort
-     * Cette commande va être excécutée après excécution des actions.
-     * @param client_id la clé primaire du client
-     */
-    @Transactional
-    @Modifying
-    @Query("Delete * from client where id=:client_id ")
-    void supprimerUnClient(Integer client_id);
+   
 }
