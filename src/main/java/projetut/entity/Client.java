@@ -15,11 +15,12 @@ import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
 import java.util.List;
 import javax.validation.constraints.NotNull;
+import org.springframework.lang.Nullable;
 
-@Inheritance(strategy = InheritanceType.SINGLE_TABLE)
+
 @Getter @Setter  @ToString 
 @Entity 
-public class Client extends Personne {
+public class Client  {
 
     public Client() {
         super();
@@ -39,8 +40,13 @@ public class Client extends Personne {
     @NotNull
     private String prenom;
    
-    @ManyToOne
-    private Personne myAngel;
+    @ManyToOne@Nullable
+    private Client myAngel;
     
+    @OneToMany(mappedBy="myAngel")@Nullable
+    private List<Client> clients;
+    
+    @OneToMany(mappedBy="proprietaire")
+    private List<Compte> comptes;
    
 }

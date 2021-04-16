@@ -40,7 +40,25 @@ public class ClientRepositoryTest {
         assertEquals(false,c1.get().isDead(),"Ce client est toujours vivant");
     }
     
+     @Test
+     @Sql("test-data.sql")
+     public void unClientPeutDesignerUnAnge(){
+         clientDao.designeLange(1, 2);
+         Optional<Client> c1=clientDao.findById(1);
+         Client myAngel=clientDao.findById(2).get();
+         assertEquals(myAngel,c1.get().getMyAngel(),"L'ange a mal été désigné");
+     }
     
+     @Test
+     @Sql("test-data.sql")
+     public void testSuppressionDunClient(){
+         long NombreInitial=clientDao.count();
+         
+         clientDao.deleteById(1);
+         
+         assertEquals(NombreInitial-1,clientDao.count(),"Le client n'a pas été supprimé correctement");
+   
+     }
     
     }
 

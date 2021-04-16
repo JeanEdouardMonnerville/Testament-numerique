@@ -2,6 +2,7 @@
 package projetut.entity;
 
 import java.util.List;
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -25,9 +26,17 @@ public class CompteLinkedIN extends Compte{
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
 
+   @Column(name="id_Linkedin", unique=true)
+    private String idLinkedIn;
+    
    @OneToMany(mappedBy="compte")
    private List<ActionLinkedIN> actionLinkedINs;
 
+   
+   
+   
+   
+   
     @Override
     public int hashCode() {
         int hash = 0;

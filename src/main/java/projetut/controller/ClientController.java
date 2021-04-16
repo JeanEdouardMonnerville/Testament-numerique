@@ -12,13 +12,11 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
-
-import projetut.dao.ClientRepository;
 import projetut.entity.Client;
 import org.springframework.dao.DataIntegrityViolationException;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
-import projetut.dao.PersonneRepository;
+import projetut.dao.ClientRepository;
 
 
 @Controller

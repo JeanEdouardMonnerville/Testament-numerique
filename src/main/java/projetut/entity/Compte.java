@@ -39,7 +39,7 @@ public class Compte{
     private List<ActionGenerale> actionGenerales;
     
     @ManyToOne
-    private Personne proprietaire;
+    private Client proprietaire;
     
     @Override
     public int hashCode() {

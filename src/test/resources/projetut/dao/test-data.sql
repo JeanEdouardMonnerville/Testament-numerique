@@ -1,13 +1,10 @@
---Angel
-Insert into  Personne(dtype,id)
-    values('Personne',2);
 
 --Client                                                                                                                                               
-Insert into  Personne(dtype,nom,prenom,dead,my_angel_id,id)
-    values ('Client','Monnerville','Jean-Edouard',FALSE,2,1);
+Insert into  Client(nom,prenom,dead,id)
+    values ('Monnerville','Jean-Edouard',FALSE,1);
 
-Insert into Personne(dtype,nom,prenom,dead,my_angel_id,id)
-    values ('Client','Toulon','Sara',FALSE,2,3);
+Insert into Client(nom,prenom,dead,id)
+    values ('Toulon','Sara',FALSE,2);
 
 --Comptes
 Insert into  Compte(dtype,adresse_mail,token,pseudo,proprietaire_id) 
@@ -16,8 +13,11 @@ Insert into  Compte(dtype,adresse_mail,token,pseudo,proprietaire_id)
 Insert into  Compte(dtype,adresse_mail,token,pseudo,proprietaire_id) 
     values ('CompteInstagram','angel@hotmail.fr','ASMRE','angel',2);
 
-Insert into  Compte(dtype,adresse_mail,token,proprietaire_id)
-    values ('CB ompteLinkedIN','jemonnerville@hotmail.fr','LGBT',1);
+Insert into  Compte(dtype,adresse_mail,token,id_Linkedin,proprietaire_id)
+    values ('CompteLinkedIN','jemonnerville@hotmail.fr','LGBT','2555',1);
+
+Insert into Compte(dtype,adresse_mail,token,id_Linkedin,proprietaire_id)
+    values ('CompteLinkedIN','SaraToulon@gmail.fr','Herbalife','1234',2);
 
 
 
