@@ -104,6 +104,23 @@
 			<artifactId>lombok</artifactId>
 			<scope>provided</scope>
 		</dependency>
+                <!--Dépendance liée à l'utilisation de spring social et spring social LinkedIn-->
+                <dependency>
+                    <groupId>org.springframework.social</groupId>
+                    <artifactId>spring-social-linkedin</artifactId>
+                    <version>${org.springframework.social-linkedin-version}</version>
+                </dependency>
+                <dependency>
+                    <groupId>org.springframework.social</groupId>
+                    <artifactId>spring-social-web</artifactId>
+                    <version>${org.springframework.social-version}</version>
+                </dependency>
+                <dependency>
+                    <groupId>commons-codec</groupId>
+                    <artifactId>commons-codec</artifactId>
+                    <version>1.5</version>
+                </dependency>
+
 	 <dependency>
 	  <groupId>org.eclipse.persistence</groupId>
 	  <artifactId>org.eclipse.persistence.core</artifactId>
