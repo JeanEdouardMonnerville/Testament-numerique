@@ -15,6 +15,7 @@ import lombok.Setter;
 import lombok.ToString;
 import lombok.RequiredArgsConstructor;
 import java.util.List;
+import lombok.AccessLevel;
 import org.springframework.lang.Nullable;
 
 @RequiredArgsConstructor
@@ -23,6 +24,7 @@ import org.springframework.lang.Nullable;
 public class Compte{
 
     @Id
+    @Setter(AccessLevel.NONE)
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
     

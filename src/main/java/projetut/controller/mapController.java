@@ -21,7 +21,7 @@ public class mapController {
         return "PageAnge";
     }
     
-    @GetMapping(path="/erreur")
+    @GetMapping(path="/error")
     public String redirecterror(){
         return "PageDerreur";
     }
@@ -35,4 +35,5 @@ public class mapController {
         return "CallBack";
     }
     
+
 }

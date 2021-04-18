@@ -19,6 +19,7 @@ import lombok.RequiredArgsConstructor;
 import java.util.List;
 import javax.persistence.Inheritance;
 import javax.persistence.InheritanceType;
+import lombok.AccessLevel;
 
 @Inheritance(strategy = InheritanceType.SINGLE_TABLE)
 @RequiredArgsConstructor
@@ -27,6 +28,7 @@ import javax.persistence.InheritanceType;
 public class CompteInstagram extends Compte {
 
     @Id
+    @Setter(AccessLevel.NONE)
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
     

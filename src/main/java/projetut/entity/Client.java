@@ -15,6 +15,7 @@ import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
 import java.util.List;
 import javax.validation.constraints.NotNull;
+import lombok.AccessLevel;
 import org.springframework.lang.Nullable;
 
 
@@ -28,6 +29,7 @@ public class Client  {
     }
     
     @Id  @GeneratedValue(strategy = GenerationType.IDENTITY) 
+    @Setter(AccessLevel.NONE)
     private Integer id;
    
    
