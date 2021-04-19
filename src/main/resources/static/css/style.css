@@ -207,3 +207,20 @@ caption{
         position: relative;
         margin: 0 0 40px 0;
     }
+
+    /*CSS Programmation */
+
+.programmer{
+    position: relative;
+    margin-top : 60px;
+}
+.description{
+    position : relative;
+margin-right : 270px;
+}
+#visibilite{
+    margin-top : 70px;
+}
+#texteEntree{
+    resize :none;
+}
