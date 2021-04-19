@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8"/>
+        <link rel="stylesheet" th:href="@{/css/style.css}" href="../static/css/style.css">
+	    <title> Supprimer un message</title>
+        <meta name="testament" content="testament,numérique,souvenirs,patrimoine"/> 
+        <link rel="shortcut icon" type="image/png" th:href="@{/css/images/logoSouvenirNumerique.png}" href="../static/css/images/logoSouvenirNumerique.png"/>
+    </head>
+    <body>
+        <h1>Choisissez le ou les messages à supprimer</h1>
+    <div class="mobile">
+    <table id="table">
+        <caption>Messages</caption>
+        <img th:src="@{/css/images/message.png}" src="../static/css/images/message.png" class="logo"/>
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Message</th>
+                <th>Selectionner</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr><td>1</td><td>x</td><td><input name="case1" id="case1" type="checkbox" value="1"></td></tr>
+            <tr><td>2</td><td>x</td><td><input name="case2" id="case2" type="checkbox" value="2"></td></tr>
+            <tr><td>3</td><td>x</td><td><input name="case3" id="case3" type="checkbox" value="3"></td></tr>
+            <tr><td>4</td><td>x</td><td><input name="case4" id="case4" type="checkbox" value="4"></td></tr>
+            <tr><td>5</td><td>x</td><td><input name="case5" id="case5" type="checkbox" value="5"></td></tr>
+            <tr><td>6</td><td>x</td><td><input name="case6" id="case6" type="checkbox" value="6"></td></tr>
+            <tr><td>7</td><td>x</td><td><input name="case7" id="case7" type="checkbox" value="7"></td></tr>
+            <tr><td>8</td><td>x</td><td><input name="case8" id="case8" type="checkbox" value="8"></td></tr>
+            <tr><td>9</td><td>x</td><td><input name="case9" id="case9" type="checkbox" value="9"></td></tr>
+            <tr><td>10</td><td>x</td><td><input name="case10" id="case10" type="checkbox" value="10"></td></tr>
+            
+        </tbody>
+        <tfoot>
+            <tr>
+                <td colspan="2"></td>
+                <td><input type="submit" value="valider"></td>
+            </tr>
+        </tfoot>
+    </table>
+    </div>
+    </body>
+</html>

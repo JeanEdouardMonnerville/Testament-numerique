@@ -189,19 +189,21 @@ caption{
     text-align: center;
 }
 
-/*CSS Programmation */
+/* CSS message supprimé */
 
-.programmer{
-    position: relative;
-    margin-top : 60px;
-}
-.description{
-    position : relative;
-margin-right : 270px;
-}
-#visibilite{
-    margin-top : 70px;
-}
-#texteEntree{
-    resize :none;
-}
+.mobile{ 
+    width: 360px; 
+    min-height: 350px; 
+    background: #fff;
+    border-width:100px 20px; 
+    border-color: #33322f;
+    border-style: solid; 
+    border-radius: 30px;
+    margin: 30px auto 0; }
+
+    #table{
+        width: 100%;
+        text-align: center;
+        position: relative;
+        margin: 0 0 40px 0;
+    }
