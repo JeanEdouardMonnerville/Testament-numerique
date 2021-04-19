@@ -1,16 +1,26 @@
 <!DOCTYPE html>
-<!--
-To change this license header, choose License Headers in Project Properties.
-To change this template file, choose Tools | Templates
-and open the template in the editor.
--->
+
 <html>
     <head>
-        <title>TODO supply a title</title>
+        <title>Programmer une publication</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" th:href="@{/css/style.css}" href="../static/css/style.css">
+        <link rel="shortcut icon" type="image/png" th:href="@{/css/images/logoSouvenirNumerique.png}" href="../static/css/images/logoSouvenirNumerique.png"/>
     </head>
     <body>
-        <div>TODO write content</div>
+        <h1>Programmer une publication</h1>
+        <form action="" method="get" class="programmer">
+            <div>
+                <label for="text">Entrer du texte... </label>
+                <input type="textarea" name="texte" id="texteEntree">
+            </div>
+            <div>
+                <label for="visibiliteSelect">Qui peut voir cette publication ?  </label>
+                <select name="visibilite" id="visibiliteSelect">
+                    <option value="">--Tout le monde--</option>
+                    <option value="prive">Mes connexions uniquement</option>
+            </div>
+            </form>
     </body>
 </html>
