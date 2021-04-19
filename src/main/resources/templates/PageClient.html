@@ -9,23 +9,32 @@
     </head>
   <body>
     <h1>Mes Souvenirs Numériques</h1>
-    <h2>Choisissez votre réseau social : </h2>
-
-    <nav id="nav2">
-      <img th:src="@{css/images/logo Insta.png}" src="../static/css/images/logo Insta.png" class="logo2">
-      <img th:src="@{css/images/LinkedIn_logo_initials.png}" src="../static/css/images/LinkedIn_logo_initials.png" class="logo2">
-    </nav>
-    <table>
+  
       <nav id="nav2">
-        <tr><a th:href="@{/ProgrammerMessage}" href="ProgrammerMessage.html" class="join">Programmer un message</a></tr>
-        <tr><a th:href="@{/SupprimerMessage}" href="SupprimerMessage.html" class="join">Supprimer un message</a></tr>
-      </nav>
-    </table>
-    <h2>Qui sera votre ange gardien ?</h2>
-    <label for="Ange"><img th:src="@{css/images/ange.png}" src="../static/css/images/ange.png" class="logo">Choisissez votre ange</label>
-    <select name="ange" id="ange" th:each="c:${clients}">
-        <option value="">Votre Ange</option>
-        <option th:text="${c.prenom} ${c.nom}">ange 1</option>
+        <input type="button" value="Programmer" class="join2">
+        <input type="button" value="Effacer des souvenirs" class="join2">
+        <label for="Ange"><img th:src="@{css/images/ange.png}" src="../static/css/images/ange.png" class="logo">Choisissez votre ange</label>
+            <select name="ange" id="ange" th:each="c:${clients}">
+              <option value="">Votre Ange</option>
+              <option th:text="${c.prenom} ${c.nom}">ange 1</option>
+            </select>
+      </nav> 
+    <div class="mobile2">
+    <table id="table2" >
+      <caption>Récents</caption>    
+      <thead>
+          <tr>
+              <th>Id</th>
+              <th>Action</th>
+              <th>Supprimer</th>
+          </tr>
+      </thead>
+      <tbody>
+          <tr><td>1</td><td>x</td><td><input name="case1" id="case1" type="checkbox" value="1"></td></tr>
+          <tr><td>2</td><td>x</td><td><input name="case2" id="case2" type="checkbox" value="2"></td></tr>
+      </tbody>
+  </table>
+</div>
     <footer>
       <a th:href="@{/aproposde}" href="Apropos.html">À propos | Made with <img th:src = "@{css/images/coeur.png}" src="../static/css/images/coeur.png" alt = "love" class="coeur"></a>
   </footer>
