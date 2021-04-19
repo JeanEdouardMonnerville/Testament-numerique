@@ -188,3 +188,20 @@ caption{
     margin-top: 3.5em;
     text-align: center;
 }
+
+/*CSS Programmation */
+
+.programmer{
+    position: relative;
+    margin-top : 60px;
+}
+.description{
+    position : relative;
+margin-right : 270px;
+}
+#visibilite{
+    margin-top : 70px;
+}
+#texteEntree{
+    resize :none;
+}
