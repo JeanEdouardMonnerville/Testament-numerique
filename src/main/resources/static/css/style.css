@@ -189,6 +189,7 @@ caption{
     width: 100px;
     height: 100px;
     object-position: 50% 50%;
+ 
 }
 #nav2{
     position: relative;
@@ -211,7 +212,7 @@ caption{
     padding-left: 4em;
     padding-right : 4em;
     margin-left: 1px;
-    margin-right: 4em;
+    margin-right: 3em;
     border-color: #cb6ce6;
     border-style: outset
 }
@@ -226,7 +227,7 @@ caption{
     padding-left: 4em;
     padding-right : 4em;
     margin-left: 1px;
-    margin-right: 4em;
+    margin-right: 3em;
     border-color: #cb6ce6;
     border-style: outset;
     background-color: #ae10da;
@@ -331,7 +332,9 @@ margin-right : 270px;
     margin: 0;
     vertical-align: top;
     width: 204px;
-    margin-top: 25px;
+ 
+    position: relative;
+    top: 220px;
 }
 p button img{
     display: block;
@@ -344,6 +347,51 @@ h3{
     margin-top : 90px;
     padding-top : 80px;
 
+}
+
+.text2 {
+    position: relative;
+    color:black;
+    top:200px
+}
+
+#blanc2 {
+    width: 400px;
+    height: 250px;
+    top: 200px
+}
+/* CSS LinkedinConnected */
+
+.connected{
+    background-image: url(../css/images/employé.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    color: #fff;
+}
+
+#blanc {
+    width: 400px;
+    height: 400px;
+    top: 200px
+}
+
+.text {
+    position: relative;
+    color:black;
+    top:350px;
+}
+
+#logo3{
+    width: 100px;
+    height: 100px;
+    position: relative;
+    top: 350px;
+}
+
+#section1 {
+    position: relative;
+    bottom: 200px;
 }
 
 

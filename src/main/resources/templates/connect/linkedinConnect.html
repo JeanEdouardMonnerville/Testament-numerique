@@ -7,9 +7,9 @@
     <link rel="shortcut icon" type="image/png" th:href="@{/css/images/logoSouvenirNumerique.png}" href="../static/css/images/logoSouvenirNumerique.png"/>
 </head>
 
-<body>
-    <h3>Vous n'avez pas encore de compte LinkedIn</h3>
-
+<body class="connected">
+    <section id="section1">
+    <h3 class="text2">Vous n'avez pas encore <br> de compte LinkedIn</h3>
     <form action="/connect/linkedin" method="POST">
         <input type="hidden" name="scope" value="r_liteprofile,r_emailaddress,w_member_social" />
         <!--,rw_company_admin,w_share -->
@@ -17,7 +17,8 @@
         <!-- csrf.token is Needed only if using spring security -->
         <p><button type="submit" id="buttonLink"><img src="../../static/css/images/linkedinlogin.png" alt ="Se connecter à LinkedIn"> </button></p>
     </form>
-
+    <img src="../..//static/css/images/blanc.png" id="blanc2">
+    </section>
 </body>
 
 </html>
