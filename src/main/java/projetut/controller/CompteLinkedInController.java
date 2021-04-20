@@ -51,35 +51,36 @@ public class CompteLinkedInController {
         this.connectionRepository = connectionRepository;
     }
 
-    private LinkedIn configureLinkedIn() {
+    private /*LinkedIn*/void configureLinkedIn() {
+        /*
         Connection<LinkedIn> connection;
         connection = connectionRepository.findPrimaryConnection(LinkedIn.class);
 
         LinkedIn linkedIn = connection.getApi();
-        log.info("Création d'une API linkedin pour {}", connection.getDisplayName());
+        log.info("Création d'une API linkedin pour {}", connection.getDisplayName());*/
 
         //this.accessToken = connection.createData().getAccessToken();
-
-        return linkedIn;
+        this.accessToken=compteDao.findById(1).get().getAccesstoken();
+        //return linkedIn;
     }
 
     @GetMapping
     public String helloLinkedIn(Model model) {
         Connection<LinkedIn> connection = connectionRepository.findPrimaryConnection(LinkedIn.class);
         if (connection == null) {   
-            return "redirect:/connect/linkedin";
+            return "/connect/linkedin";
         }
-        LinkedIn linkedIn = configureLinkedIn();
+        //LinkedIn linkedIn = configureLinkedIn();
 
         return "Indentification";
     }
 
     @RequestMapping(value = "/registration", method = RequestMethod.POST)
     private String creationDuCompteEtduClient() {
-        /*
+        this.configureLinkedIn();
         //Création de la connection LinkedIN
-        LinkedIn linkedIn = this.configureLinkedIn();
-
+        //LinkedIn linkedIn = this.configureLinkedIn();
+        LinkedIn linkedIn=new LinkedInTemplate(accessToken);
         //Récupération des informations de l'utilisateur
         LinkedInProfile profile = linkedIn.profileOperations().getUserProfile();
 
@@ -98,7 +99,7 @@ public class CompteLinkedInController {
         client.setNom(nom);
         clientDao.save(client);
 
-        //Enregistrement du compte LinkedIn dans la BDD
+        /*//Enregistrement du compte LinkedIn dans la BDD
         CompteLinkedIN compte = new CompteLinkedIN();
         compte.setIdLinkedIn(idLinkedIn);
         compte.setAccesstoken(accessToken);
@@ -106,7 +107,7 @@ public class CompteLinkedInController {
         compte.setProprietaire(client);
         compteDao.save(compte);*/
         
-        LinkedIn linkedin = this.configureLinkedIn();
+       
         return "Identification";
     }
 }

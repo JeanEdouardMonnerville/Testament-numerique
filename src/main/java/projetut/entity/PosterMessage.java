@@ -29,8 +29,8 @@ public class PosterMessage extends ActionLinkedIN {
     //visible=false => visible uniquement par les connexions    
     private boolean visibilite;
     
-    //le contenue du message à poster sur LinkedIn
-    private String text;
+    //le contenu du message à poster sur LinkedIn
+    private String contenu;
 
     @Override
     public int hashCode() {

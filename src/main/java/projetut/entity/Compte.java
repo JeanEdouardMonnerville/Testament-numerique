@@ -28,7 +28,7 @@ public class Compte{
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
     
-    @Column(name="token")
+    @Column(name="token", length = 512)
     private String Accesstoken;
     
     @Column(name="Adresse_mail")

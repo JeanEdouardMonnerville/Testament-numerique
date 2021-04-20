@@ -1,26 +1,31 @@
 <!DOCTYPE html>
 
 <html>
-    <head>
-        <title>Programmer une publication</title>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" th:href="@{/css/style.css}" href="../static/css/style.css">
-        <link rel="shortcut icon" type="image/png" th:href="@{/css/images/logoSouvenirNumerique.png}" href="../static/css/images/logoSouvenirNumerique.png"/>
-    </head>
-    <body>
-        <h1>Programmer une publication</h1>
-        <form action="" method="get" class="programmer">
-            <div>
-                <textarea name="textarea" id="texteEntree"
-                rows="10" cols="50">Que voulez-vous dire ?</textarea>
-            </div>
-            <div id="visibilite">
-                <label for="visibiliteSelect" >Qui peut voir cette publication ? </label>
-                <select name="visibilite" id="visibiliteSelect">
-                    <option value="">--Tout le monde--</option>
-                    <option value="prive">Mes connexions uniquement</option>
-            </div>
-            </form>
-    </body>
+
+<head>
+    <title>Programmer une publication</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" th:href="@{/css/style.css}" href="../static/css/style.css">
+    <link rel="shortcut icon" type="image/png" th:href="@{/css/images/logoSouvenirNumerique.png}"
+        href="../static/css/images/logoSouvenirNumerique.png" />
+</head>
+
+<body>
+    <h1>Programmer une publication</h1>
+    <form method="POST" class="programmer" th:object="${PM}" th:action="@{save}">
+        <div>
+            <textarea th:field="*{contenu}" name="textarea" id="texteEntree" rows="10"
+                cols="50">Que voulez-vous dire ?</textarea>
+        </div>
+        <div id="visibilite">
+            <label for="visibiliteSelect">Qui peut voir cette publication ? </label>
+            <select th:field="*{visibilite}" name="visibilite" id="visibiliteSelect">
+                <option value="true">--Tout le monde--</option>
+                <option value="false">Mes connexions uniquement</option>
+                <input type="submit" value="Enregistrer" />
+        </div>
+    </form>
+</body>
+
 </html>
