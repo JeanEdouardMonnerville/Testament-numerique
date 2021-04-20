@@ -73,8 +73,10 @@ nav a{
 
 
 footer{
-    position:absolute;  
-    bottom:0;  
+    position: -webkit-sticky;
+	position: sticky;
+	top: 20px;
+
     width:100%;  
     padding-top:50px;  
     height:50px;
@@ -107,6 +109,9 @@ caption{
     background-color: #cb6ce6;
     color: white;
     cursor: pointer;
+    width: 150px;
+    line-height: 50px;
+    border-radius: 10px;
     
 }
 
@@ -120,6 +125,30 @@ caption{
     margin-top: 20em;
 }
 
+.pageange {
+    background-image: url(../css/images/angegardien.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    color: #fff;
+}
+.mobile3{ 
+    width: 360px; 
+    min-height: 350px; 
+    background: #fff;
+    border-width:100px 20px; 
+    border-color: #33322f;
+    border-style: solid; 
+    border-radius: 30px;
+    margin: 30px auto 0; }
+
+    #table3{
+        width: 100%;
+        text-align: center;
+        position: relative;
+        margin: 0 0 40px 0;
+        color: black;
+    }
 /*CSS Spécifique à la page d'erreur*/
 
 #Smileypascontent{
@@ -142,16 +171,63 @@ caption{
 }
 #nav2{
     position: relative;
-    margin-top: 2em;
-    text-align: center;
+    margin-right: 200px;
+    margin-left :200px;
 }
 #nav3 {
     position: relative;
     margin-top: 2em;
     text-align: center;
 }
+.join2{
+    text-transform: uppercase;
+    text-decoration:none;
+    background-color: #cb6ce6;
+    padding: 0;
+    border-radius: 10px;
+    border-bottom: 5px solid white;
+    padding : 1em;
+    padding-left: 4em;
+    padding-right : 4em;
+    margin-left: 1px;
+    margin-right: 4em;
+    border-color: #cb6ce6;
+    border-style: outset
+}
+.join2:hover{
+    text-transform: uppercase;
+    text-decoration:none;
+    background-color: #cb6ce6;
+    padding: 0;
+    border-radius: 10px;
+    border-bottom: 5px solid white;
+    padding : 1em;
+    padding-left: 4em;
+    padding-right : 4em;
+    margin-left: 1px;
+    margin-right: 4em;
+    border-color: #cb6ce6;
+    border-style: outset;
+    background-color: #ae10da;
+    color: white;
+}
+.mobile2{
+    width: 260px; 
+    min-height: 250px; 
+    background: #fff;
+    border-width:70px 20px; 
+    border-color: #33322f;
+    border-style: solid; 
+    border-radius: 30px;
+    margin: 30px auto 0;
+}
 
-
+#table2{ 
+    border:none;         
+    width: 100%;
+    text-align: center;
+    position: relative;
+    margin: 0 0 40px 0;}
 /*CSS Identification */
 
 .join{

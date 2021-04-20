@@ -7,13 +7,17 @@
         <link rel="shortcut icon" type="image/png" th:href="@{/css/images/logoSouvenirNumerique.png}" href="../static/css/images/logoSouvenirNumerique.png"/>
 	    <meta name="testament" content="testament,numérique,souvenirs,patrimoine,ange,connecté"/> 
     </head>
+    <section>
     <h1>Bienvenue dans les souvenirs numériques</h1>
     <div id="description">
     <p>Si l'un de nos clients vous a choisi comme étant son ange, il apparaîtra ci-dessous.</p>
     <p>Vous avez la responsabilité de nous avertir de son décès. Soyez vigilents</p>
+    </section>
+    
     </div>
-    <body>
-        <TABLE BORDER="1"id="tableauDeLange" cellpadding= > 
+    <body class="pageange">
+        <div class="mobile3">
+        <TABLE BORDER="1"id="table3" cellpadding= > 
             <CAPTION> Qui nous a quitté? </CAPTION> 
             <TR> 
             <TH>N°</TH>
@@ -26,13 +30,16 @@
            <TD> Dupont Paul </TD> 
            <TD> <input type="checkbox" name="Dead" id="isDead"> </TD> 
             </TR> 
+            <tr>
+                <td colspan="3"><form action="Put"><input type="submit" value="Enregistrer" id="ValideTableauAnge"></form></td>
+            </tr>
           </TABLE>
-          <form action="Put">
-              <input type="submit" value="Enregistrer" id="ValideTableauAnge">
-          </form>
+        </div>
+          
           <footer>
             <a th:href="@{/aproposde}" href="Apropos.html">À propos | Made with <img th:src = "@{css/images/coeur.png}" src="../static/css/images/coeur.png"alt = "love" class="coeur"></a>
         </footer>
+    
 </body>
 </html>
 
