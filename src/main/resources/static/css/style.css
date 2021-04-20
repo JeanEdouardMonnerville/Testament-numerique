@@ -78,7 +78,7 @@ footer{
 	top: 20px;
 
     width:100%;  
-    padding-top:50px;  
+    padding-top:350px;  
     height:50px;
     }
 
@@ -120,12 +120,6 @@ caption{
     background-color: #ae10da;}
 
 
-
-#MadeWith{
-    margin-top: 20em;
-    position: center;
-}
-
 .pageange {
     background-image: url(../css/images/angegardien.jpg);
     background-repeat: no-repeat;
@@ -152,6 +146,8 @@ caption{
         position: relative;
         margin: 0 0 40px 0;
         color: black;
+        border:none;         
+
     }
     
     .vertical-menu {
@@ -253,6 +249,7 @@ caption{
     text-align: center;
     position: relative;
     margin: 0 0 40px 0;}
+
 /*CSS Identification */
 
 .join{
