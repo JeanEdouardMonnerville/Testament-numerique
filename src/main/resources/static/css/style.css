@@ -123,6 +123,7 @@ caption{
 
 #MadeWith{
     margin-top: 20em;
+    position: center;
 }
 
 .pageange {
@@ -140,7 +141,10 @@ caption{
     border-color: #33322f;
     border-style: solid; 
     border-radius: 30px;
-    margin: 30px auto 0; }
+    margin: 30px auto 0; 
+    position: absolute; top: 150px; left: 500px;
+    
+}
 
     #table3{
         width: 100%;
@@ -149,6 +153,27 @@ caption{
         margin: 0 0 40px 0;
         color: black;
     }
+    
+    .vertical-menu {
+        width: 200px; 
+      }
+      
+      .vertical-menu a {
+        background-color: rgb(255, 255, 255); 
+        color: black; 
+        display: block; 
+        padding: 25px; 
+        text-decoration: none; 
+      }
+      
+      .vertical-menu a:hover {
+        background-color: #ccc;
+      }
+      
+      .vertical-menu a.active {
+        background-color:#cb6ce6; 
+        color: white;
+      }
 /*CSS Spécifique à la page d'erreur*/
 
 #Smileypascontent{
