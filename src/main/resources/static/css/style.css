@@ -300,3 +300,28 @@ margin-right : 270px;
 #texteEntree{
     resize :none;
 }
+
+/* CSS LinkedIn Connect */
+#buttonLink{
+    display: inline-block;
+    height: 53px;
+    padding: 0;
+    margin: 0;
+    vertical-align: top;
+    width: 204px;
+    margin-top: 25px;
+}
+p button img{
+    display: block;
+    height: 50px;  
+    width: 200px;
+}
+
+h3{
+    position : relative;
+    margin-top : 90px;
+    padding-top : 80px;
+
+}
+
+
