@@ -51,33 +51,19 @@ public class CompteLinkedInController {
         this.connectionRepository = connectionRepository;
     }
 
-    private /*LinkedIn*/void configureLinkedIn() {
-        /*
-        Connection<LinkedIn> connection;
-        connection = connectionRepository.findPrimaryConnection(LinkedIn.class);
-
-        LinkedIn linkedIn = connection.getApi();
-        log.info("Création d'une API linkedin pour {}", connection.getDisplayName());*/
-
-        //this.accessToken = connection.createData().getAccessToken();
-        this.accessToken=compteDao.findById(1).get().getAccesstoken();
-        //return linkedIn;
-    }
-
     @GetMapping
     public String helloLinkedIn(Model model) {
         Connection<LinkedIn> connection = connectionRepository.findPrimaryConnection(LinkedIn.class);
         if (connection == null) {   
-            return "/connect/linkedin";
+            return "redirect:/connect/linkedin";
         }
-        //LinkedIn linkedIn = configureLinkedIn();
 
         return "Indentification";
     }
 
     @RequestMapping(value = "/registration", method = RequestMethod.POST)
     private String creationDuCompteEtduClient() {
-        this.configureLinkedIn();
+        
         //Création de la connection LinkedIN
         //LinkedIn linkedIn = this.configureLinkedIn();
         LinkedIn linkedIn=new LinkedInTemplate(accessToken);

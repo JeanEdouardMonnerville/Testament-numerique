@@ -13,9 +13,7 @@ public interface ActionLinkedINRepository extends JpaRepository<ActionLinkedIN, 
      /**
      * Renvoie une liste d'action pour un compte LinkedIn
      * @param compte_id la clé primaire du compte désigné
-     *//*
-    @Transactional
-    @Modifying   
-    @Query("SELECT * From action_linkedin WHERE compte_id = :compte_id")
-    List<ActionLinkedIN> ToutesLesActionsLinkedInPourUnCompte(Integer compte_id);*/
+     */
+    @Query("From ActionLinkedIN WHERE compte_id = :compte_id")
+    List<ActionLinkedIN> findAllByCompteId(Integer compte_id);
 }

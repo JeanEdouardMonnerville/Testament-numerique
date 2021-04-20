@@ -11,17 +11,12 @@ import org.springframework.web.bind.annotation.GetMapping;
 @Controller
 public class mapController {
     
-        @GetMapping("/Identitfication")
+        @GetMapping("/Identification")
     public String redirectPageIdentity(){
         return "Identification";
     }
     
-       @GetMapping(path="/PageAnge")
-    public String redirectIdentificationPageAnge(){
-        return "PageAnge";
-    }
-    
-    @GetMapping(path="/error")
+    @GetMapping(path="/erreur")
     public String redirecterror(){
         return "PageDerreur";
     }
@@ -33,6 +28,11 @@ public class mapController {
     @GetMapping(path="/CallBack")
     public String redirectCallBack(){
         return "CallBack";
+    }
+    
+    @GetMapping(path="PageAnge")
+    public String resirectPageAnge(){
+        return "PageAnge";
     }
     
 

@@ -5,7 +5,6 @@
  */
 package projetut.controller;
 
-import java.rmi.UnexpectedException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -18,7 +17,7 @@ import projetut.dao.PosterMessageRepository;
 import projetut.entity.PosterMessage;
 import projetut.entity.Compte;
 
-@Controller@RequestMapping(path="posterMessageLI")
+@Controller
 public class actionPosterMessageController {
 
     @Autowired
@@ -27,17 +26,23 @@ public class actionPosterMessageController {
     @Autowired
     private CompteRepository compteDao;
     
-    @GetMapping(path = "add")
+    @GetMapping(path ="addMessage")
     public String montreLeFormulairePourAjout(@ModelAttribute("PM") PosterMessage PM) {
         return "ProgrammerMessage";
     }
 
 
-    @PostMapping(path = "save")
+    @PostMapping(path = "saveMessage")
     public String ajouteLActionPuisMontreLaListe(PosterMessage PM) {
         Compte compteDeJE=compteDao.getOne(1);
         PM.setCompte(compteDeJE);
         dao.save(PM);
         return "redirect:/PageClient"; 
     }
+    
+    @RequestMapping(path="/PageClient")
+    public String afficherPotseMessageAction(Model model){
+        model.addAttribute("PosterMessageAction", dao.findAllByCompteId(1));
+        return "PageClient" ;}
+    
 }

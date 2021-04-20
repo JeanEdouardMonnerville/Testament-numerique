@@ -14,10 +14,10 @@
     <p>Vous avez la responsabilité de nous avertir de son décès. Soyez vigilents</p>
     </section>
     <div class="vertical-menu">
-          <a href="../static/index.html" class="active">Accueil</a>
-          <a href="../templates/Identification.html">Identification</a>
-          <a href="../templates/PageClient.html">Page client</a>
-          <a href="../templates/Apropos.html">A propos</a>
+          <a href="../static/index.html" th:href="@{/}" class="active">Accueil</a>
+          <a href="../templates/Identification.html" th:href="Identification">Identification</a>
+          <a href="../templates/PageClient.html" th:href="PageClient">Page client</a>
+          <a href="../templates/Apropos.html" th:href="aproposde">A propos</a>
         </div>
     </div>
     <body class="pageange">
@@ -25,16 +25,21 @@
         <TABLE BORDER="1"id="table3" cellpadding= > 
             <CAPTION> Qui nous a quitté? </CAPTION> 
             <TR> 
-            <TH>N°</TH>
+            <TH>ID</TH>
            <TH> Nom-Prénom </TH> 
            <TH> Mort? </TH> 
             </TR> 
 
             <TR id="lesClientsAnge"> 
-           <TH> 1 </TH> 
+           <TD> 0 </TD> 
            <TD> Dupont Paul </TD> 
            <TD> <input type="checkbox" name="Dead" id="isDead"> </TD> 
             </TR> 
+            <TR id="lesClientsAnge" th:each="p:${protege}"> 
+              <TD th:text="${p.id}"> 1 </TD> 
+              <TD th:text="${p.nom} ${p.prenom}"> Dupont Paul </TD> 
+              <TD> <input type="checkbox" name="Dead" id="isDead"> </TD> 
+               </TR> 
             <tr>
                 <td colspan="3"><form action="Put"><input type="submit" value="Enregistrer" id="ValideTableauAnge"></form></td>
             </tr>

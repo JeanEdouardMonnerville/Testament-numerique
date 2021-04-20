@@ -13,7 +13,7 @@
 
 <body>
     <h1>Programmer une publication</h1>
-    <form method="POST" class="programmer" th:object="${PM}" th:action="@{save}">
+    <form method="POST" class="programmer" th:object="${PM}" th:action="@{saveMessage}">
         <div>
             <textarea th:field="*{contenu}" name="textarea" id="texteEntree" rows="10"
                 cols="50">Que voulez-vous dire ?</textarea>

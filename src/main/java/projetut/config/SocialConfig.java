@@ -20,10 +20,17 @@ import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.crypto.encrypt.Encryptors;
 import org.springframework.security.crypto.encrypt.TextEncryptor;
+import org.springframework.social.connect.Connection;
 import org.springframework.social.connect.ConnectionRepository;
 import org.springframework.social.connect.UsersConnectionRepository;
 import org.springframework.social.connect.jdbc.JdbcUsersConnectionRepository;
 import org.springframework.social.connect.web.ConnectController;
+import org.springframework.social.connect.web.ProviderSignInController;
+import org.springframework.social.connect.web.SignInAdapter;
+import org.springframework.social.oauth2.GrantType;
+import org.springframework.social.oauth2.OAuth2Operations;
+import org.springframework.social.oauth2.OAuth2Parameters;
+import org.springframework.web.context.request.NativeWebRequest;
 
 @Slf4j
 @Configuration
@@ -40,6 +47,7 @@ public class SocialConfig {
     public ConnectionFactoryLocator connectionFactoryLocator() {
         ConnectionFactoryRegistry registry = new ConnectionFactoryRegistry();
         LinkedInConnectionFactory lfactory = new LinkedInConnectionFactory(clientId, clientSecret);
+
         lfactory.setScope(scope);
         registry.addConnectionFactory(lfactory);
 
@@ -67,11 +75,11 @@ public class SocialConfig {
         return new JdbcUsersConnectionRepository(dataSource, connectionFactoryLocator(),
                 textEncryptor);
     }
-    
+
     @Bean
-        public TextEncryptor textEncryptor() {
-            return Encryptors.noOpText();
-        }
+    public TextEncryptor textEncryptor() {
+        return Encryptors.noOpText();
+    }
 
     @Configuration
     @Profile("prod")
@@ -97,12 +105,12 @@ public class SocialConfig {
         }
 
     }
-    
+
     //ConnectController prend en charge les flux d’autorisation pour OAuth 1 et OAuth 2
     @Bean
     public ConnectController connectController() {
-        return new ConnectController(connectionFactoryLocator(), 
-            connectionRepository());
+        return new ConnectController(connectionFactoryLocator(),
+                connectionRepository());
     }
 
 }

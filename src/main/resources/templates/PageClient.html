@@ -1,42 +1,56 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="UTF-8"/>
-        <link rel="stylesheet" th:href="@{/css/style.css}" href="../static/css/style.css">
-        <link rel="shortcut icon" type="image/png" th:href="@{/css/images/logoSouvenirNumerique.png}" href="../static/css/images/logoSouvenirNumerique.png"/>
-	    <title> Page d'accueil client</title>
-	    <meta name="testament" content="testament,numérique,souvenirs,patrimoine"/> 
-    </head>
-  <body>
-    <h1>Mes Souvenirs Numériques</h1>
-  
-      <nav id="nav2">
-        <input type="button" value="Programmer" class="join2">
-        <input type="button" value="Effacer des souvenirs" class="join2">
-        <label for="Ange"><img th:src="@{css/images/ange.png}" src="../static/css/images/ange.png" class="logo">Choisissez votre ange</label>
-            <select name="ange" id="ange" th:each="c:${clients}">
-              <option value="">Votre Ange</option>
-              <option th:text="${c.prenom} ${c.nom}">ange 1</option>
-            </select>
-      </nav> 
-    <div class="mobile2">
-    <table id="table2" >
-      <caption>Récents</caption>    
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="stylesheet" th:href="@{/css/style.css}" href="../static/css/style.css">
+  <link rel="shortcut icon" type="image/png" th:href="@{/css/images/logoSouvenirNumerique.png}"
+    href="../static/css/images/logoSouvenirNumerique.png" />
+  <title> Page d'accueil client</title>
+  <meta name="testament" content="testament,numérique,souvenirs,patrimoine" />
+</head>
+
+<body>
+  <h1>Mes Souvenirs Numériques</h1>
+
+  <nav id="nav2">
+    <button class="join2"><a th:href="@{addMessage}" value="Programmer">Programmer</a></button>
+    <button class="join2"><a th:href="@{addSuppr}"value="Effacer des souvenirs">Effacer des Postes</a></button>
+  </nav>
+  <div>
+    <label for="Ange"><img th:src="@{css/images/ange.png}" src="../static/css/images/ange.png" class="logo">Choisissez
+      votre ange</label>
+    <ul id="ange" th:each="c:${clients}">
+      <li th:text="${c.prenom} ${c.nom}">Nom Prenom: <em th:text="${c.nom} ${c.prenom}">Ange
+          Potentiel 1</em>
+        <a th:href="@{saveAnge(id=${c.id})}">Choisir comme ange</a>
+      </li>
+    </ul>
+  </div>
+
+  <div class="mobile2">
+    <table id="table2">
+      <caption>Récents</caption>
       <thead>
-          <tr>
-              <th>Id</th>
-              <th>Action</th>
-              <th>Supprimer</th>
-          </tr>
+        <tr>
+          <th>Id</th>
+          <th>Action</th>
+          <th>Supprimer</th>
+        </tr>
       </thead>
       <tbody>
-          <tr><td>1</td><td>x</td><td><input name="case1" id="case1" type="checkbox" value="1"></td></tr>
-          <tr><td>2</td><td>x</td><td><input name="case2" id="case2" type="checkbox" value="2"></td></tr>
+        <tr th:each="pma:${PosterMessageAction}">
+          <td th:text="${pma.id}"></td>
+          <td>Poster un Message sur Linkedin</td>
+          <td><input name="case1" id="case1" type="checkbox"></td>
+        </tr>
       </tbody>
-  </table>
-</div>
-    <footer>
-      <a>Made with <img th:src = "@{css/images/coeur.png}" src="../static/css/images/coeur.png" alt = "love" class="coeur"></a>
+    </table>
+  </div>
+  <footer>
+    <a>Made with <img th:src="@{css/images/coeur.png}" src="../static/css/images/coeur.png" alt="love"
+        class="coeur"></a>
   </footer>
-  </body>
+</body>
+
 </html>
