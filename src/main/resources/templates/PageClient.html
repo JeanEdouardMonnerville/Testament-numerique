@@ -21,7 +21,7 @@
     <label for="Ange"><img th:src="@{css/images/ange.png}" src="../static/css/images/ange.png" class="logo">Choisissez
       votre ange</label>
     <ul id="ange" th:each="c:${clients}">
-      <li th:text="${c.prenom} ${c.nom}">Nom Prenom: <em th:text="${c.nom} ${c.prenom}">Ange
+      <li th:text="${c.prenom} ${c.nom} ">Nom Prenom: <em th:text=" ${c.nom} ${c.prenom}">Ange
           Potentiel 1</em>
         <a th:href="@{saveAnge(id=${c.id})}">Choisir comme ange</a>
       </li>

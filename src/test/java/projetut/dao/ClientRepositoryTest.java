@@ -3,6 +3,7 @@ package projetut.dao;
 
 
 
+import java.util.List;
 import java.util.Optional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTest;
@@ -28,9 +29,9 @@ public class ClientRepositoryTest {
     @Test
     @Sql("test-data.sql")
     public void onSaitCompterLeNombreDeClient() {
-        int combirenDansLeJeuDeTest=2;
+        int combirenDansLeJeuDeTest=5;
         long nombre= clientDao.count();
-        assertEquals(combirenDansLeJeuDeTest,nombre,"On doit trouver 2 client");
+        assertEquals(combirenDansLeJeuDeTest,nombre,"On doit trouver 5 client");
     }
     
     @Test
@@ -47,6 +48,20 @@ public class ClientRepositoryTest {
          Optional<Client> c1=clientDao.findById(1);
          Client myAngel=clientDao.findById(2).get();
          assertEquals(myAngel,c1.get().getMyAngel(),"L'ange a mal été désigné");
+     }
+     
+     @Test
+     @Sql("test-data.sql")
+     public void trouveLespersonnesDontJeSuisLangeTest(){
+         clientDao.designeLange(2, 1);
+         clientDao.designeLange(3, 1);
+         clientDao.designeLange(4, 1);
+         
+         List<Client> mesAngelé=clientDao.trouveLespersonnesDontJeSuisLange(1);
+         
+         assertEquals(3,mesAngelé.size(),"3 client ont choisi le client 1 comme ange");
+         
+         
      }
     
     
