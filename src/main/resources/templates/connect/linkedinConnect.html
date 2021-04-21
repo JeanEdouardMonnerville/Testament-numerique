@@ -3,7 +3,7 @@
 
 <head>
     <title>LinkedIn</title>
-    <link rel="stylesheet" href="../../static/css/style.css">
+    <link rel="stylesheet" type="text/css" th:href="@{/css/style.css}" href="../static/css/style.css" />
     <link rel="shortcut icon" type="image/png" th:href="@{/css/images/logoSouvenirNumerique.png}" href="../static/css/images/logoSouvenirNumerique.png"/>
 </head>
 
@@ -15,9 +15,9 @@
         <!--,rw_company_admin,w_share -->
         <input type="hidden" th:name="${_csrf.parameterName}" th:value="${_csrf.token}" />
         <!-- csrf.token is Needed only if using spring security -->
-        <p><button type="submit" id="buttonLink"><img src="../../static/css/images/linkedinlogin.png" alt ="Se connecter à LinkedIn"> </button></p>
+        <p><button type="submit" id="buttonLink"><img src="../../static/css/images/linkedinlogin.png" th:src="@{/css/images/linkedinlogin.png}" alt ="Se connecter à LinkedIn"> </button></p>
     </form>
-    <img src="../..//static/css/images/blanc.png" id="blanc2">
+    <img src="../../static/css/images/blanc.png" th:src="@{/css/images/blanc.png}" id="blanc2">
     </section>
 </body>
 
