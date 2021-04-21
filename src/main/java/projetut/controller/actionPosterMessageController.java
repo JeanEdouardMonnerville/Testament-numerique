@@ -1,8 +1,4 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package projetut.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -17,6 +13,9 @@ import projetut.dao.PosterMessageRepository;
 import projetut.entity.PosterMessage;
 import projetut.entity.Compte;
 
+/*
+Controleur de gestion de l'action: "Poster un message LinkedIn après ma mort
+*/
 @Controller
 public class actionPosterMessageController {
 

@@ -251,6 +251,10 @@ caption{
     position: relative;
     margin: 0 0 40px 0;}
 
+.descriptif{
+    font-size:large;
+}
+
 /*CSS Identification */
 
 .join{
@@ -340,6 +344,7 @@ margin-right : 270px;
     border: 2px solid #0e76a8;
 }
 #buttonLink:hover{
+    cursor: pointer;
     display: inline-block;
     height: 53px;
     padding: 0;

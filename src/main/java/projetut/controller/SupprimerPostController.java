@@ -6,7 +6,6 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
 import projetut.dao.CompteRepository;
 import projetut.dao.SupprimerPostRepository;
 import projetut.entity.Compte;
@@ -34,5 +33,11 @@ public class SupprimerPostController {
         dao.save(SP);
         return "redirect:/PageClient"; 
     }
+    //TODO: il faut permettre l'affichage différentiel des actions
+     /*@RequestMapping(path="/PageClient")
+    public String afficherSupressionPostAction(Model model){
+        model.addAttribute("SupprimerPostAction", dao.findAllByCompteId(1));
+        return "PageClient" ;}*/
+    
     
 }

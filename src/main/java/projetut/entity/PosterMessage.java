@@ -1,5 +1,6 @@
 package projetut.entity;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -30,6 +31,7 @@ public class PosterMessage extends ActionLinkedIN {
     private boolean visibilite;
     
     //le contenu du message à poster sur LinkedIn
+    @Column(length=1023)
     private String contenu;
 
     @Override

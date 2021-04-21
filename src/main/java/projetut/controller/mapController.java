@@ -8,6 +8,9 @@ package projetut.controller;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 
+/*
+Ce controleur sert à maper les pages qui ne néscessite pas de vue
+*/
 @Controller
 public class mapController {
     

@@ -6,7 +6,11 @@ import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Table;
- 
+     
+/*
+C'est une entité dont le connectController de spring social à besoin afin de 
+fonctionner. Son utilité n'est pas démontrée dans le code.
+*/
 @Entity
 @Table(name = "Userconnection")
 public class UserConnection implements Serializable {

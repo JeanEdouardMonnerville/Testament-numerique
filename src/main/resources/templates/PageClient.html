@@ -41,7 +41,12 @@
       <tbody>
         <tr th:each="pma:${PosterMessageAction}">
           <td th:text="${pma.id}"></td>
-          <td>Poster un Message sur Linkedin</td>
+          <td class="descriptif">Poste LinkedIn<td>
+          <td><input name="case1" id="case1" type="checkbox"></td>
+        </tr>
+        <tr th:each="spa:${SupprimerPostAction}">
+          <td th:text="${spa.id}"></td>
+          <td class="descriptif">Suppression LinkedIn<td>
           <td><input name="case1" id="case1" type="checkbox"></td>
         </tr>
       </tbody>

@@ -12,7 +12,6 @@ import javax.persistence.InheritanceType;
 import javax.persistence.OneToMany;
 import lombok.AccessLevel;
 import lombok.Getter;
-import lombok.NoArgsConstructor;
 import lombok.Setter;
 import lombok.ToString;
 import lombok.RequiredArgsConstructor;
@@ -56,9 +55,5 @@ public class CompteLinkedIN extends Compte{
             return !((this.id == null && other.id != null) || (this.id != null && !this.id.equals(other.id)));
     }
 
-    @Override
-    public String toString() {
-        return "projetut.entity.CompteLinkedIN[ id=" + id + " ]";
-    }
     
 }

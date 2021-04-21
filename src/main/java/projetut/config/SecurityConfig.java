@@ -18,7 +18,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
     {
      security.httpBasic().disable();
      security.authorizeRequests()
-                  .antMatchers("/h2-console/**").permitAll()//allow h2 console access to admins only
+                  .antMatchers("/h2-console/**").permitAll()//allow h2 console access to everybody
                   .and().csrf().ignoringAntMatchers("/h2-console/**")//don't apply CSRF protection to /h2-console
                   .and().headers().frameOptions().sameOrigin();//allow use of frame to same origin urls
     }
